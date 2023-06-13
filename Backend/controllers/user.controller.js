@@ -1,7 +1,9 @@
 const { UserModel } = require('../models/user.model');
 const bcrypt = require('brcypt');
 require('dotenv').config();
+const {redis} = require('../database/redis');
 const jwt = require('jsonwebtoken');
+
 
 const register = async (req, res) => {
 
@@ -56,9 +58,15 @@ const login = async (req, res) => {
         return res.status(400).send({ "error": error.message })
     }
 }
-const logout = async (req, res) => {
-
+const logout = async (req, res) => { 
+    let token = req.cookies.accessToken;
+    try {
+        let decoded = jwt.verify(token, process.env.accessToken);
+        redis.set(decoded.userID, token);
+        res.status(200).send({message:"logged out successfully"});
+    } catch (error) {
+        res.status(400).send({error})
+    }
 }
 
 module.exports = { register, login, logout }
-

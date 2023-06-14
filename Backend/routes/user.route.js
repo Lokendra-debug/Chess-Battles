@@ -8,7 +8,4 @@ userRoute.post("/register",register)
 userRoute.post("/login",login)
 userRoute.post("/logout",auth,logout)
 
-
-
-
 module.exports = {userRoute}

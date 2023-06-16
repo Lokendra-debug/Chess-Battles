@@ -5,6 +5,9 @@ const http = require('http');
 const { Server } = require("socket.io");
 const path = require('path')
 const cookieParser = require('cookie-parser');
+const { formatMessage } = require('./utils/messages');
+const { userJoin, getCurrentUser, userLeave, getRoomUsers } = require('./utils/users');
+
 
 
 
@@ -24,7 +27,7 @@ app.use("/user",userRoute)
 
 app.get('/friendchess',function(req,res){
     // res.redirect('/public/chess-ai-main/index.html')
-    res.sendFile(__dirname + '/public/default.html');
+    res.sendFile(__dirname + '/public/index.html');
 })
 
 
@@ -47,22 +50,44 @@ server.listen(process.env.port,async()=>{
     }
     console.log(`server is running at port ${process.env.port}`);
 })
-
+let botName = "ChatBot"
 // socket app
 const io = new Server(server);
-io.on('connection', function (socket) {
-    console.log('new connection');
+io.on('connection', (socket) => {
+    
+    socket.on('join-room', (data) => {
+        const user = userJoin(socket.id, data.username, data.room);
+        socket.join(user.room);
+        socket.emit('message', formatMessage(botName, "Welcome to chess chat"));
+        socket.broadcast.to(user.room).emit('message', formatMessage(botName, `${user.username} has joined the chat`));
 
-    socket.on('message', function (msg) {
-        console.log('Got message from client: ' + msg);
-    });
-});
+        //send user details
+        io.to(user.room).emit('roomUsers', {
+            room: user.room,
+            users: getRoomUsers(user.room)
+        })
+    })
 
-io.on('connection', function (socket) {
-    console.log('new connection');
-
-    // Called when the client calls socket.emit('move')
+    socket.on('chatMsg', (msg) => {
+        const user = getCurrentUser(socket.id);
+        io.to(user.room).emit("message", formatMessage(user.username, msg));
+    })
+    
     socket.on('move', function (msg) {
-        socket.broadcast.emit('move', msg);
+        const user = getCurrentUser(socket.id);
+        socket.broadcast.to(user.room).emit('move', msg);
     });
-});
+
+    socket.on('disconnect', () => {
+        const user = userLeave(socket.id);
+        if (user) {
+            io.to(user.room).emit('message', formatMessage(botName, `${user.username} has left the chat`));
+
+            io.to(user.room).emit('roomUsers', {
+                room: user.room,
+                users: getRoomUsers(user.room)
+            })
+        }
+
+    })
+})

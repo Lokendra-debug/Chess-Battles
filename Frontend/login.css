@@ -1,75 +1,139 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Orbitron', sans-serif;
-    }
-    body {
-    background-image: url("https://images.unsplash.com/photo-1543092587-d8b8feaf362b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    animation: rotateBg 60s infinite linear;
-    }
+[10:51 pm, 17/06/2023] Deepanshi: <div>
+        <nav style="display: flex">
+          <div>
+            
+            <img class="logo" src="/Frontend/Chess Battles_logo (2)/1.png" alt="Logo" />
+          </div>
+
+
+             <h1>
+               
+                Chess Battles</h1>
+               
+
+
+        <a href="login.html">
+
+
+
+
+     
+        <div class="dropdown-content">
+          <a class="dropdown-link" href="/Frontend/login.html">Login</a>
+          <a class="dropdown-link" href="/registar.html">Registration</a>
+        </div>
+      </div>
+    </a>
+          
+        </nav>
+[11:05 pm, 17/06/2023] Deepanshi: *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+  }
+  body {
+  background-image: url("https://images.unsplash.com/photo-1543092587-d8b8feaf362b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  animation: rotateBg 60s infinite linear;
+  }
+  
+  @keyframes rotateBg {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(0deg); }
+  }
+  
+  header {
+  background: linear-gradient(to right,  #081325, #de5246);
+  border-radius: 10px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .login {
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom right, #dfbdbd, #e6d7d7 49.9%, #ecdadc 50%, #ecd9d9);
+  width: 90%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 40px;
+  text-align: center;
+  }
+  
+  .inputlogin {
+  border: none;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  outline: none;
+  }
+  
+  .inputlogin:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  ::placeholder {
+  color: #999;
+  }
+  
+  #signinbtn,
+  #registerbtn {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 10px;
+  padding: 10px 30px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
     
-    @keyframes rotateBg {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(0deg); }
-    }
-    
-    header {
-    background: linear-gradient(to right,  #081325, #de5246);
-    border-radius: 10px;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
-    }
-    
-    .login {
-    border-radius: 10px;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(to bottom right, #dfbdbd, #e6d7d7 49.9%, #ecdadc 50%, #ecd9d9);
-    width: 90%;
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 40px;
-    text-align: center;
-    }
-    
-    .inputlogin {
-    border: none;
-    border-radius: 20px;
-    background-color: whitesmoke;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    margin: 10px;
-    padding: 10px 20px;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    outline: none;
-    }
-    
-    .inputlogin:focus {
-    background-color: rgba(255, 255, 255, 0.5);
-    }
-    
-    ::placeholder {
-    color: #999;
-    }
-    
-    #signinbtn,
-    #registerbtn {
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    margin: 20px 10px;
-    padding: 10px 30px;
-    outline: none;
-    transition: all 0.2s ease-in-out;
-    }
+       
+    color: #ffffff;
+    padding: 0 30px;
+    background-color: rgb(0, 140, 255);
+  }
+  
+  
+  
+  /* Style for the logo */
+  
+  .logo {
+    border-radius: 0%;
+    object-fit: cover;
+  width: 70px;
+    margin-right: 10px;
+    margin-bottom: -5px;
+  }
+  
+  /* Animation for the logo */
+  
+  .logo:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  nav div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }

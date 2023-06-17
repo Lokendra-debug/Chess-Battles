@@ -1,34 +1,4 @@
 
-#Fmain{
-    display: flex;
-    background-color: rgb(196, 238, 224);
-    justify-content: space-around;
-    padding-bottom: 10px;
-}
-
-
-
-.bottom>ul>li{
-    list-style-type: none;
-    font-size: 18px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
-}
-
-.bottom>ul :nth-child(1){
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-.bottom>ul>svg{
-
-    margin-right: 10px;
-   
-} */
-
-
 /* CSS for Footer */
 
 * {
@@ -48,6 +18,7 @@
   }
   
   .footer {
+    margin-top: 60px;
     background-color: rgb(185, 192, 189);
     padding: 10px;
   }

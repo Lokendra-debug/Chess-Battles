@@ -77,8 +77,106 @@ nav div:last-child {
   gap: 20px;
 }
 
+.image .profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}  
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.hydrated {
+    visibility: inherit;
+}
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+}
+span {
+    font-size: 18px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-       
+.buttons .btn {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 8px 25px;
+    border-radius: 25px;
+    font-size: 18px;
+    white-space: nowrap;
+    background: linear-gradient(to left, #33ffb8 0%, #fff599 100%);
+}
+
+.buttons .btn {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 8px 25px;
+    border-radius: 25px;
+    font-size: 18px;
+    white-space: nowrap;
+    background: linear-gradient(to left, #33ffbe 0%, #ffe099 100%);
+}
+span {
+    font-size: 18px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.data > h2 {
+    font-size: 21px;
+}
+.data h2 {
+    font-size: 33px;
+    font-weight: 600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.profile-card {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 25px;
+    padding: 30px;
+    border: 1px solid #ffffff40;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
       
 
@@ -166,18 +264,86 @@ footer {
         }
 
 
-
+/* 
       .dev{
         display:flex;
         /* grid-template-rows: repeat(2,200px);
         grid-template-columns: repeat(3,300px); */
-        gap: 20px;
-        padding: 10px;
-      }
+       
+       
+      *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+}
 
+#profile-pankaj {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
 
+.buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
+.profile-card {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 25px;
+    padding: 30px;
+    border: 1px solid #ffffff40;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+#hading {
+    text-align: center;
+    margin: 50px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+/* @media (max-width: 1200px)
+.main {
+    width: 100%;
+    /* height: 100vh; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+} */ */
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+}
+/* +----------- */
 
 
 
@@ -266,14 +432,18 @@ footer {
   </ul>
 
 <div class="dev">
-  <h3>OUR DEVELOPERS</h3>
+  <!-- <h3>OUR DEVELOPERS</h3> -->
   <h1 id="hading">Developers</h1>
+
+
+
+
   <div id="profile-pankaj">
       <div>
           <section class="main">
               <div class="profile-card">
                   <div class="image">
-                      <img src="../images/developer/nitesh.jpg" alt="" class="profile-pic">
+                      <img src="/Frontend/Picture.jpg" alt="" class="profile-pic">
                   </div>
                   <div class="data">
                       <h2>Kamalpreet Kaur</h2>
@@ -284,19 +454,24 @@ footer {
                           multiple programming languages .</span>
                   </div>
                   <div class="buttons">
-                      <a href="mailto:niteshkumar240198@gmail.com?subject=QR%20Insight%20Support%20Center:%20Connect%20with%20Us%20for%20Assistance&body=Dear%20Nitesh"
+                      <a href="mailto:kamalpreetkaur6007@gmail.comhttps://mail.google.com/mail/u/0/#inbox?compose=new"
                           class="btn">Message</a>
-                      <a href="https://www.linkedin.com/in/nitesh-kumar-119819253/" target="_blank" class="btn">Follow
+                      <a href="https://www.linkedin.com/in/kamal-preet-kaur-aa8640248/" target="_blank" class="btn">Follow
                           Me</a>
                   </div>
               </div>
           </section>
       </div>
       <div>
+
+
+
+
+
           <section class="main">
               <div class="profile-card">
                   <div class="image">
-                      <img src="../images/developer/kishan.png" alt="" class="profile-pic">
+                      <img src="/Frontend/dip.jpeg" alt="" class="profile-pic">
                   </div>
                   <div class="data">
                       <h2>Dipanshi Tiwari</h2>
@@ -307,9 +482,9 @@ footer {
                           design to the team.</span>
                   </div>
                   <div class="buttons">
-                      <a href="mailto:kishansharma6377@gmail.com?subject=QR%20Insight%20Support%20Center:%20Connect%20with%20Us%20for%20Assistance&body=Dear%20Kishan"
+                      <a href="mailto:dipanshitiwari972@gmail.comhttps://mail.google.com/mail/u/0/#inbox?compose=new"
                           class="btn">Message</a>
-                      <a href="https://www.linkedin.com/in/kishan-sharma6377/" target="_blank" class="btn">Follow
+                      <a href="https://www.linkedin.com/in/dipanshi-tiwari-42aa52234/" target="_blank" class="btn">Follow
                           Me</a>
                   </div>
               </div>

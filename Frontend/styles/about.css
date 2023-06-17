@@ -1,54 +1,12 @@
-/* slider starts css hare  */
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  #about_section{
-    margin-top: 90px;
-  }
-  
-  #about_footer_section{
-    margin-top: -125px;
-  }
+
   
   #detail-data, #contain-image, #contain-image > img{
     border-radius: 10px;
-  }
+  } 
   
   
   
-/*   
-  nav *, #chatBot *, #menu-page *, footer *{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-  } */
-  
-  
-  
-  
-  *,
-  *::before,
-  *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none;
-    outline: none;
-  }
-  
-  :root {
-    /*  FONTS  */
-    --font-family: sans-serif;
-    --font-size: 62.5%;
-    --line-height: base-line;
-    /*  WIDTHS  */
-    --container-width: 1366px;
-  }
+
   
   html {
     font-family: var(--font-family);
@@ -56,16 +14,16 @@ body {
     line-height: var(--line-height);
   }
   
-  body {
+  /* body {
     font-size: 1.6rem;
-  }
+  } */
   
-  #header,
+  /* #header,
   #main,
   #footer {
     margin: 1.5rem 0rem;
   }
-  
+   */
   img {
     width: 100%;
     max-width: 100%;

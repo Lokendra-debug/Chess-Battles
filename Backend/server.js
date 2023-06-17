@@ -13,7 +13,8 @@ const { userJoin, getCurrentUser, userLeave, getRoomUsers } = require('./utils/u
 
 const { connection } = require("./database/db");
 const { redis } = require("./database/redis");
-const { userRoute } = require("./routes/user.route")
+const { userRoute } = require("./routes/user.route");
+const { feedRouter } = require("./routes/feedback.route");
 
 const app = express();
 app.use(express.json());
@@ -23,7 +24,7 @@ app.use(express.static('public'));
 
 
 app.use("/user", userRoute)
-
+app.use("/feed",feedRouter)
 
 app.get('/friendchess', function (req, res) {
     // res.redirect('/public/chess-ai-main/index.html')

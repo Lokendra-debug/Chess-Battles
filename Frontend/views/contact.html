@@ -34,7 +34,35 @@
     </header>
 
     <main>
-        
+      <div class="container__feedback_page">
+
+        <form class="form-container" id="submitFeedback_user">
+
+            <div class="headline"><span>Contact Us</span></div>
+            <div class="form-line success">
+                <input id="name-nil" type="text" class="form-input" value="" required>
+                <label class="top">Name</label>
+                <div class="check-label"></div>
+            </div>
+            <div class="form-line">
+                <input id="email-nil" type="email" class="form-input" required>
+                <label>Your email *</label>
+                <div class="error-label">Field is required!</div>
+                <div class="check-label"></div>
+            </div>
+
+            <div class="form-line">
+                <textarea id="text-message" class="form-input" required></textarea>
+                <label>Message</label>
+                <div class="check-label"></div>
+                <div class="error-label">Field is required!</div>
+            </div>
+
+            <input  type="submit" class="form-button" value="Submit" >
+        </form>
+    </div>  
+
+
     </main>
 
 

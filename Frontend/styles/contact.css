@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container__feedback_page {
     max-width: 100%;
     position: relative;
@@ -190,3 +191,27 @@
         bottom: 30px;
     }
  }
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+  /* RESPONSIVE DESIGN */
+
+  @media(max-width:992px){
+  
+  }
+  
+  
+  @media(max-width:576px){
+  
+  }
+>>>>>>> 86e3929aac12abde4258ee1b010dea6aedd96b4f

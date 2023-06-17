@@ -8,8 +8,8 @@ document.getElementById('submitFeedback_user').addEventListener('submit', (e)=>{
   })
   
   function feedback() {
-    let name = document.getElementById("name-pankaj").value;
-    let email = document.getElementById("email-pankaj").value;
+    let name = document.getElementById("name-nil").value;
+    let email = document.getElementById("email-nil").value;
     let message = document.getElementById("text-message").value;
   
     let signdata = {
@@ -42,3 +42,42 @@ document.getElementById('submitFeedback_user').addEventListener('submit', (e)=>{
   
       });
   }
+
+
+
+
+  const getData=()=>{
+    fetch("deloyed link/feed/showfeedback",{
+    
+        headers:{
+          "Authorization":cookie("accessToken")
+        }
+
+    }).then(res=>res.json())
+    
+        .then(feedbacks => {
+      const parent = document.getElementById("parent");
+      for (let feedback of feedbacks) {
+        const div = document.createElement("div");
+        const message = document.createElement("p");
+        
+        
+        message.textContent = feedback.message;
+        
+        
+        
+
+
+     
+        
+
+  
+        div.appendChild(message);
+       
+        parent.appendChild(div);
+      }
+    })
+    .catch(err => console.log(err));
+};
+
+getData()

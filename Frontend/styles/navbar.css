@@ -63,11 +63,13 @@ header{
 
 .action_btn{
     background-color: green;
+    background-color: #007bff;
     color: #000;
+    color: white;
     padding: 0.5rem 1rem;
     border: none;
     outline: none;
-    border-radius: 20px;
+    border-radius: 5px;
     font-size: 0.8rem;
     font-weight: bold;
     cursor:pointer;
@@ -76,7 +78,8 @@ header{
 
 .action_btn:hover{
     scale: 1.05;
-    color: #000;
+    color: white;
+    letter-spacing: 1px;
 }
 
 .action_btn:active{

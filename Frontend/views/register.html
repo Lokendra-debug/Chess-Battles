@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./styles/navbar.css">
-    <link rel="stylesheet" href="./styles/index.css">
-    <title>Homepage: Chess Battles</title>
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/register.css">
+    <title>REGISTER</title>
 </head>
 <body>
     <header>
@@ -33,28 +33,21 @@
     </header>
 
     <main class="mainContainer">
-        <div class="leftdiv">
-            <img src="./images/logo.png" alt="">
-            <p>Login</p>
-            <p>Enter Your Credentials</p>
+        <div>
+            <img src="../images/logo.png" alt="logo">
+            <p>SignUp</p>
             <form id="form">
-                <input type="email" placeholder="Enter you email">
-                <input type="password" placeholder="Enter you password">
-                <a href="">Forgot your password?</a>
-                <input type="submit" value="LOGIN" id="login_btn">
+                <input type="text" placeholder="Enter your Name" id="name" required>
+                <input type="email" placeholder="Enter your Email" id="email" required>
+                <input type="password" placeholder="Enter your Password" id="password" required>
+                <input type="submit" value="Register" id="register">
             </form>
-            <a href="">New user? Register Here</a>
-            <p>———🌟OR Login With🌟———</p>
-            <a href="" id="google_btn">Continue with Google</a>
+            <a href="">Already User?login here</a>
         </div>
-        <div class="carousel-container rightdiv">
-            <img class="carousel-image active" src="./images/cru1.jpg" alt="Image 1">
-            <img class="carousel-image" src="./images/cru2.gif" alt="Image 2">
-            
-          </div>
+        
     </main>
 
-    <script src="./scripts/navbar.js"></script>
-    <script src="./scripts/index.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script src="../scripts/register.js"></script>
 </body>
 </html>

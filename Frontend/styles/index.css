@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+                                 /* carousel css */
 
 .carousel-container {
     position: relative;
@@ -26,3 +27,99 @@
   .carousel-image.active {
     opacity: 1;
   }
+
+                                     /* main css */
+
+.mainContainer{
+    width: 60%;
+    margin: auto;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 40px;
+}
+
+.mainContainer>div{
+    height: 100%;
+    width: 100%;
+}
+.mainContainer>.leftdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    gap:10px;
+    color: green;
+    padding: 10px;
+    
+}
+
+.mainContainer>.leftdiv>img{
+    width: 15%;
+    
+}
+.mainContainer>.leftdiv>form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+}
+
+.mainContainer>.leftdiv>form>input{
+    text-decoration: none;
+    padding: 5px;
+}
+
+#login_btn{
+background-color: yellow;
+border: none;
+border-radius: 40px;
+}
+
+#google_btn{
+    background-color: rgb(172, 210, 172);
+    padding: 20px;
+    border-radius: 10px;
+}
+.mainContainer>.leftdiv a{
+    text-decoration: none;
+    color: red;
+    font-weight: 600;
+}
+
+.mainContainer>.rightdiv>img{
+    width: 100%;
+}
+
+
+
+                                           /* RESPONSIVE DESIGN */
+
+@media(max-width:992px){
+    .mainContainer{
+
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: 500px 400px;
+        column-gap: 40px;
+        row-gap: 40px;
+    }
+    
+   
+}
+
+
+@media(max-width:576px){
+
+    .mainContainer{
+
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: 400px 300px;
+        column-gap: 40px;
+        row-gap: 40px;
+    }
+
+    .mainContainer>.leftdiv a{
+        font-size: 10px;
+    }
+    
+}

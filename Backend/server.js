@@ -1,29 +1,47 @@
 const express = require("express");
 require('dotenv').config();
 const cors = require('cors');
+const http = require('http');
+const { Server } = require("socket.io");
+const path = require('path')
 const cookieParser = require('cookie-parser');
+const { formatMessage } = require('./utils/messages');
+const { userJoin, getCurrentUser, userLeave, getRoomUsers } = require('./utils/users');
+
 
 
 
 const { connection } = require("./database/db");
-const {redis} = require("./database/redis");
-const {userRoute}=require("./routes/user.route")
+const { redis } = require("./database/redis");
+const { userRoute } = require("./routes/user.route")
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
+app.use(express.static('public'));
 
 
-app.use("/user",userRoute)
+app.use("/user", userRoute)
 
-app.all("*",(req,res)=>{
+
+app.get('/friendchess', function (req, res) {
+    // res.redirect('/public/chess-ai-main/index.html')
+    res.sendFile(__dirname + '/public/index.html');
+})
+
+
+app.all("*", (req, res) => {
     res.status(404).send({
         "error": `404 ! Invalid URL Detected.`
     })
 })
 
-app.listen(process.env.port,async()=>{
+
+
+const server = http.createServer(app);
+
+server.listen(process.env.port, async () => {
     try {
         await connection
         console.log("db is connected");
@@ -31,4 +49,45 @@ app.listen(process.env.port,async()=>{
         console.log(error.message)
     }
     console.log(`server is running at port ${process.env.port}`);
+})
+let botName = "ChatBot"
+// socket app
+const io = new Server(server);
+io.on('connection', (socket) => {
+
+    socket.on('join-room', (data) => {
+        const user = userJoin(socket.id, data.username, data.room);
+        socket.join(user.room);
+        socket.emit('message', formatMessage(botName, "Welcome to chess chat"));
+        socket.broadcast.to(user.room).emit('message', formatMessage(botName, `${user.username} has joined the chat`));
+
+        //send user details
+        io.to(user.room).emit('roomUsers', {
+            room: user.room,
+            users: getRoomUsers(user.room)
+        })
+    })
+
+    socket.on('chatMsg', (msg) => {
+        const user = getCurrentUser(socket.id);
+        io.to(user.room).emit("message", formatMessage(user.username, msg));
+    })
+
+    socket.on('move', function (msg) {
+        const user = getCurrentUser(socket.id);
+        socket.broadcast.to(user.room).emit('move', msg);
+    });
+
+    socket.on('disconnect', () => {
+        const user = userLeave(socket.id);
+        if (user) {
+            io.to(user.room).emit('message', formatMessage(botName, `${user.username} has left the chat`));
+
+            io.to(user.room).emit('roomUsers', {
+                room: user.room,
+                users: getRoomUsers(user.room)
+            })
+        }
+
+    })
 })

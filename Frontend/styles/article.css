@@ -3,19 +3,60 @@
 
 
 
+#cont{
+  padding: 20px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+    }
 
 
 
 
 
+/* styles.css */
 
-  /* RESPONSIVE DESIGN */
-
-  @media(max-width:992px){
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Adjustments for smaller screens */
+  /* body {
+    padding: 10px;
+  } */
   
+  header h1 {
+    font-size: 24px;
+  }
+
+  main section {
+    margin-bottom: 30px;
   }
   
-  
-  @media(max-width:576px){
-  
+  img {
+    max-width: 100%;
+    height: auto;
   }
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 15
+}

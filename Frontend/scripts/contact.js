@@ -1,6 +1,6 @@
 // lokendra js
 
-const url="http://localhost:4000"
+const url="https://chess-battles.onrender.com"
 
 var chessUser=localStorage.getItem("chessUser")
 

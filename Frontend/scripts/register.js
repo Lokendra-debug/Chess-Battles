@@ -1,4 +1,4 @@
-const url="http://localhost:4000"
+const url="https://chess-battles.onrender.com"
 let playgame_btn1=document.querySelector("#playgame1")
 let playgame_btn2=document.querySelector("#playgame2")
 let form=document.querySelector("#form")

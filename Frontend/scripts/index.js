@@ -1,5 +1,6 @@
 
 
+
                                   // JavaScript code for carousel functionality
 var slideIndex = 0;
 var slides = document.getElementsByClassName("carousel-image");
@@ -71,6 +72,7 @@ form.addEventListener("submit",async(e)=>{
       });
 
       if(result.msg==="login successfully"){
+        localStorage.setItem("chessUser","islive")
         location.href="chessPage.html"
       }else if(result.error==="Invalid Password"){
         alert("Please enter your valid Password");

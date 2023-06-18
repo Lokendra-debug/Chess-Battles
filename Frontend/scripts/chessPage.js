@@ -13,14 +13,13 @@ if(chessUser==="islive"){
 let playgame1=document.querySelector("#playgame1")
 let playgame2=document.querySelector("#playgame2")
 
-
 let logo=document.querySelector(".logo")
 logo.addEventListener("click",(e)=>{
   e.preventDefault();
   if(playgame1.innerText==="Logout" || playgame2.innerText==="Logout"){
-    location.href="../chessPage.html"
+    location.href="./chessPage.html"
   }else{
-    location.href="../index.html"
+    location.href="./index.html"
   }
 })
 
@@ -29,7 +28,7 @@ playgame1.addEventListener("click",(e)=>{
     if(playgame1.innerText==="Logout" || playgame2.innerText==="Logout"){
         localStorage.setItem("chessUser","isdied")
         alert("logout successfully");
-        location.href="../index.html"
+        location.href="./index.html"
         
       }else{
         alert("PLEASE LOGIN")
@@ -41,7 +40,7 @@ playgame1.addEventListener("click",(e)=>{
     if(playgame1.innerText==="Logout" || playgame2.innerText==="Logout"){
         localStorage.setItem("chessUser","isdied")
         alert("logout successfully");
-        location.href="../index.html"
+        location.href="./index.html"
         
       }else{
         alert("PLEASE LOGIN")

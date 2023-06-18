@@ -39,6 +39,7 @@ form.addEventListener("submit",async(e)=>{
         });
   
         if(result.msg==="User registered successfully"){
+            localStorage.setItem("chessUser","islive")
             alert("User registered successfully! pleaes login")
             location.href="../chessPage.html";
         }else if(result.msg==="already exist please login"){

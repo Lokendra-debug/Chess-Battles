@@ -20,7 +20,12 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
-app.use(express.static('public'));
+// app.use(express.static('public'));
+
+
+app.get("/", (req,res)=>{
+    res.send("base point")
+})
 
 
 app.use("/user", userRoute)

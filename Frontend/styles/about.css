@@ -38,6 +38,7 @@
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 1rem;
+    font-family: sans-serif;
   }
   
   .grid {
@@ -94,6 +95,7 @@
     /* grid-template-columns: repeat(2, 1fr); */
     display: flex;
     justify-content: space-around;
+    background-color: rgb(27, 125, 190);
   }
   
   #detail-data {
@@ -103,6 +105,8 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     padding: 20px;
     display: flex;
+    background-color: rgb(129, 129, 231);
+    color: white;
   
   }
   
@@ -214,6 +218,7 @@
     padding: 30px;
     border: 1px solid #ffffff40;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    background-color: white;
   }
   
   .image {

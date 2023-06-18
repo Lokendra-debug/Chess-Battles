@@ -20,7 +20,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
-// app.use(express.static('public'));
+app.use(express.static('public'));
 
 
 app.get("/", (req,res)=>{
@@ -31,6 +31,7 @@ app.get("/", (req,res)=>{
 app.use("/user", userRoute)
 app.use("/feed",feedRouter)
 
+app.use(express.static('public'));
 app.get('/friendchess', function (req, res) {
     // res.redirect('/public/chess-ai-main/index.html')
     res.sendFile(__dirname + '/public/index.html');

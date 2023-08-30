@@ -1,7 +1,7 @@
 # healthy-discovery-1593
 # Chess Battles
 
-![Chess](https://drive.google.com/file/d/18oOI2CPV9wphtIl1LIVnGohMUobX2EDZ/view)
+![Chess](Screenshots/logo.png)
 
 Welcome to the README for the Chess Battles project! This document provides an overview of the project, the technology stack used, deployment links, and includes screenshots to help you understand the project better.
 
@@ -33,23 +33,27 @@ Here are some screenshots showcasing the different aspects of the Multilayer Che
 
 1. **Homepage**: The landing page provides contains login and SignUp option for the game.
 
-   ![Homepage](screenshots/homepage.png)
+   ![Homepage](Screenshots/homepage.PNG)
 
-2. **Game Lobby**: Players can create or join game rooms in the lobby also they can enter their gamin username.
+2. **Options**:After login you get two options to play , play with a friend and playe with computer bot
 
-   ![Game Lobby](screenshots/lobby.png)
+   ![Options](Screenshots/options.PNG)
 
-3. **Chessboard**: The interactive chessboard allows players to make moves seamlessly.
+3. **Game Lobby**: Players can create or join game rooms in the lobby also they can enter their gamin username.
 
-   ![Chessboard](screenshots/chessboard.png)
+   ![Game Lobby](Screenshots/lobby.PNG)
 
-4. **Real-time Gameplay**: Players can see their opponent's moves in real-time.
+4. **Chessboard**: The interactive chessboard allows players to make moves seamlessly.
 
-   ![Real-time Gameplay](screenshots/realtime.png)
+   ![Chessboard](Screenshots/chessboard.PNG)
 
 5. **Interaction**: Players can also chat and share video with each other.
 
-   ![Game History](screenshots/history.png)
+   ![Interaction](Screenshots/interaction.PNG)
+
+6. **Chess Bot**: You can also play with computer chess bot in real time.
+
+   ![Chess-Bot](Screenshots/ai-chessbot.PNG)
 
 Feel free to explore the deployed links to experience the Multilayer Chess Game firsthand!
 

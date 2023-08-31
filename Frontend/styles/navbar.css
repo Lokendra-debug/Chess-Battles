@@ -1,18 +1,16 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: bo;
-    font-family: sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 body{
     height: 100vh;
-    background-color: #000;
-    background-image: url("../images/chess\ image.png");
-    background-color: cover;
-    background-position: center;
+    background-color: #312e2b;
 }
-
+header{
+    background-color:#96bc4b;;
+}
 li{
     list-style: none;
 }
@@ -45,13 +43,17 @@ header{
 }
 
 .navbar .logo a{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
 }
 
 .navbar .links{
     display: flex;
     gap: 2rem;
+}
+
+.navbar .links>li>a{
+    font-size: 1.5rem;
 }
 
 .navbar .toggle_btn{

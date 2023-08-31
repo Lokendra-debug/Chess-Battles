@@ -39,11 +39,16 @@
   column-gap: 40px;
 }
 
-.mainContainer > div {
+.mainContainer>div {
   height: 100%;
   width: 100%;
 }
-.mainContainer > .leftdiv {
+
+.mainContainer>.rightdiv>img {
+  width: 100%;
+}
+
+.mainContainer>.leftdiv {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,26 +59,85 @@
   padding: 10px;
 }
 
-.mainContainer > .leftdiv > img {
-  width: 15%;
+#btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+
 }
-.mainContainer > .leftdiv > form {
+
+.btn1,
+.btn2 {
+  border: none;
+  outline: none;
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
+  background-color: rgb(241, 187, 86);
+  transition: all 0.2s;
+}
+
+.btn1:hover,
+.btn2:hover {
+  width: 120px;
+  height: 34px;
+  font-size: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.active {
+  width: 120px;
+  height: 34px;
+  font-size: 20px;
+  transition: all 0.2s;
+}
+
+#cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  width: 80%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
-.mainContainer > .leftdiv > form > input {
-  text-decoration: none;
+form>input {
+  width: 200px;
+  height: 30px;
+  margin: 10px 0px;
+  border: 2px solid black;
+  font-size: 15px;
   padding: 5px;
+  outline: none;
+  color: black;
+  background: none;
 }
 
-#login_btn {
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  color: white;
+form>input::placeholder {
+  color: black;
+}
+
+
+.sub {
+  background-color: #96bc4b;
+}
+
+.sub:hover {
+  cursor: pointer;
+}
+
+label {
+  color: black;
+  font-size: 20px;
+  margin-top: 10px;
 }
 
 #google_btn {
@@ -83,17 +147,9 @@
   border-radius: 3px;
   color: white;
 }
-.mainContainer > .leftdiv a {
-  text-decoration: none;
-  color: black;
-  font-size: 14px;
-  float: right;
-  /* font-weight: 600; */
-}
 
-.mainContainer > .rightdiv > img {
-  width: 100%;
-}
+
+
 
 /* RESPONSIVE DESIGN */
 
@@ -114,7 +170,7 @@
     row-gap: 40px;
   }
 
-  .mainContainer > .leftdiv a {
+  .mainContainer>.leftdiv a {
     font-size: 10px;
   }
 }

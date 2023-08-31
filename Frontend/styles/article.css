@@ -1,16 +1,25 @@
-
-
-
-
-
-#cont{
-  padding: 20px;
+main{
+  padding: 0px 20px 20px 20px;
+  color:  wheat;
+}
+main>div{
+  display: flex;
+  width: 100%;
+  margin: 10px 0px
+}
+main>div>h1{
   font-size: 20px;
-  color: rgb(0, 0, 0);
-    }
-
-
-
+  margin: 5px 0px;
+}
+main>div>p{
+  width: 80%;
+  font-size: 18px;
+  margin: 5px 10px 0px 0px ;
+}
+main>div>img{
+  width: 30%;
+  height: 40vh;
+}
 
 
 /* styles.css */

@@ -23,6 +23,9 @@
     "moment": "^2.29.4",
     "mongoose": "^7.2.4",
     "nodemon": "^2.0.22",
-    "socket.io": "^4.6.2"
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0",
+    "socket.io": "^4.6.2",
+    "uuid": "^9.0.0"
   }
 }

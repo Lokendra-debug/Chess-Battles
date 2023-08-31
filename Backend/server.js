@@ -7,6 +7,7 @@ const path = require('path')
 const cookieParser = require('cookie-parser');
 const { formatMessage } = require('./utils/messages');
 const { userJoin, getCurrentUser, userLeave, getRoomUsers } = require('./utils/users');
+const {passport}=require("./config/google.oauth");
 
 
 
@@ -21,6 +22,18 @@ app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
 app.use(express.static('public'));
+
+
+app.get('/auth/google',
+  passport.authenticate('google', { scope: ['profile',"email"] }));
+
+app.get('/auth/google/callback', 
+  passport.authenticate('google', { failureRedirect: '/login', session:false }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    console.log(req.user)
+    res.redirect('/');
+  });
 
 
 app.get("/", (req,res)=>{
